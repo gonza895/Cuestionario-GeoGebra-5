@@ -15,7 +15,6 @@
     height: 100vh;
     background-image: url("./fondo.jpg");
     background-position: center;
-    /*background-size: cover;*/
 }
 
 .principal .card{
@@ -200,6 +199,7 @@
     background-color: rgb(58, 171, 58);
     color: white;
     border-color:transparent !important;
+    pointer-events: none;
 }
 
 .correcto > .contenedor-valor > span{
@@ -212,6 +212,7 @@
     background-color: rgb(171, 58, 92);
     color: white;
     border-color:transparent !important;
+    pointer-events: none;
 }
 
 .incorrecto > .contenedor-valor > span{
@@ -221,6 +222,7 @@
 }
 .incorrectoParcial {
     opacity: 0.4;
+    pointer-events: none;
 }
 .incorrectoParcial  > .contenedor-valor > span{
     border-color:white;
@@ -232,6 +234,7 @@
 
 .correctoParcial {
     opacity: 0.4;
+    pointer-events: none;
 }
 
 .resultados{
@@ -263,4 +266,21 @@
     font-size: 18px;
     margin-top: 10px;
     transition: background-color .3s;
+}
+
+/*Query*/
+
+@media (max-width:665px){
+    .card{
+        width: 80% !important;
+    }
+    .opciones{
+        width: 100% !important;
+    }
+    .opcion{
+        width: 100% !important;
+    }
+    .copy{
+        font-size:12px;
+    }
 }
