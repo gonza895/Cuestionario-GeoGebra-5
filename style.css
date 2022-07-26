@@ -249,6 +249,7 @@
 .resultados .resultado{
     font-size: 20px;
     margin-top: 25px;
+    text-align: center;
 }
 
 .resultados .resultados-title{
@@ -283,4 +284,40 @@
     .copy{
         font-size:12px;
     }
+}
+
+@media (max-width:410px){   
+    .card{
+        width: 90% !important;
+    }
+    .principal .card .contenido .titulo{
+        font-size: 20px;
+        text-align: center;
+    }
+    .subtitulo{
+        font-size: 15px;
+        text-align: center;
+    }
+    .copy{
+        font-size:8px;
+    }
+    #comenzar{
+        font-size: 15px;
+    }
+    .pregunta{
+        font-size: 15px !important;
+    }
+    .opcion{
+        padding: 7px !important;
+    }
+    .resultados .resultados-title{
+        font-size: 18px;
+    }
+    .resultados .resultado{
+        font-size: 18px;
+    }
+    #recargar{
+        font-size: 15px !important;
+    }
+
 }

@@ -12,7 +12,6 @@ let cantPreguntas = 0;
 let totalPreguntas = data.length;
 let correctas = 0;
 
-
 //Eventos
 comenzar.addEventListener("click", () => {
     cuestionario.classList.add("active");
@@ -65,12 +64,12 @@ class UI{
                         e.target.parentElement.firstElementChild.children[0].innerHTML='<i class="fa-solid fa-check"></i>';
                         e.target.parentElement.classList.add("correcto");
                         correctas++;
-                        mostrarIncorrectas(valor);
+                        this.mostrarIncorrectas(valor);
                     }else{
                         e.target.parentElement.firstElementChild.children[0].innerHTML='<i class="fa-solid fa-xmark"></i>';
                         e.target.parentElement.classList.add("incorrecto");
-                        mostrarIncorrectas(valor);
-                        mostrarCorrecta(pregunta.respuesta);
+                        this.mostrarIncorrectas(valor);
+                        this.mostrarCorrecta(pregunta.respuesta);
                     }
                 }
                
@@ -131,6 +130,31 @@ class UI{
 
         cuestionario.appendChild(div);
     }   
+
+    mostrarIncorrectas(valor){
+        let opciones = document.querySelectorAll(".opcion");
+    
+        for(let i=0; i<opciones.length;i++){
+            if(opciones[i].getAttribute("value")!=valor){
+                opciones[i].firstElementChild.children[0].innerHTML='<i class="fa-solid fa-xmark"></i>';
+                opciones[i].classList.add("incorrectoParcial");
+            }
+        }
+    }
+    
+    mostrarCorrecta(valor){
+        let opciones = document.querySelectorAll(".opcion");
+    
+        for(let i=0; i<opciones.length;i++){
+            if(opciones[i].getAttribute("value")==valor){
+                opciones[i].firstElementChild.children[0].innerHTML='<i class="fa-solid fa-check"></i>';
+                opciones[i].classList.remove("incorrectoParcial");
+                opciones[i].classList.add("correcto");
+                opciones[i].classList.add("correctoParcial");
+            }
+        }
+    }
+    
 }
 
 
@@ -142,7 +166,7 @@ function cargarOpciones(){
 
         borrarOpciones();
         ui.opcionesUI(pregunta, cantPreguntas, totalPreguntas);
-        
+
         cantPreguntas++;
     }else{
         ui.mostrarResultados(totalPreguntas, correctas);
@@ -156,27 +180,3 @@ function borrarOpciones(){
 }
 
 
-function mostrarIncorrectas(valor){
-    let opciones = document.querySelectorAll(".opcion");
-
-    for(let i=0; i<opciones.length;i++){
-        if(opciones[i].getAttribute("value")!=valor){
-            opciones[i].firstElementChild.children[0].innerHTML='<i class="fa-solid fa-xmark"></i>';
-            opciones[i].classList.add("incorrectoParcial");
-        }
-    }
-}
-
-
-function mostrarCorrecta(valor){
-    let opciones = document.querySelectorAll(".opcion");
-
-    for(let i=0; i<opciones.length;i++){
-        if(opciones[i].getAttribute("value")==valor){
-            opciones[i].firstElementChild.children[0].innerHTML='<i class="fa-solid fa-check"></i>';
-            opciones[i].classList.remove("incorrectoParcial");
-            opciones[i].classList.add("correcto");
-            opciones[i].classList.add("correctoParcial");
-        }
-    }
-}
