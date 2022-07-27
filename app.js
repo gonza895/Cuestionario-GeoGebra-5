@@ -1,22 +1,33 @@
 //Import
-import {data} from "./data.js";
+import {data, info} from "./data.js";
 
 //Variables
 let comenzar = document.querySelector("#comenzar");
 let contenidoPrincipal = document.querySelector(".contenido");
 let cuestionario = document.querySelector(".cuestionario");
+let subtitulo = document.querySelector(".subtitulo");
+let numero = document.querySelector(".num");
 
 let caracteres = ["A", "B", "C", "D"];
 
+const urlSearchParams = new URLSearchParams(window.location.search);
+const id = urlSearchParams.get("id");
+
 let cantPreguntas = 0;
-let totalPreguntas = data.length;
+let totalPreguntas = data[id].length;
 let correctas = 0;
+
+initApp();
+
+function initApp(){
+    subtitulo.textContent=`${info[id].titulo}`;
+    numero.textContent=`#${parseInt(id)+1}`;
+}
 
 //Eventos
 comenzar.addEventListener("click", () => {
     cuestionario.classList.add("active");
     contenidoPrincipal.style.display="none";
-
     cargarOpciones();
 });
 
@@ -116,17 +127,22 @@ class UI{
         div.innerHTML=`
             <p class="resultados-title">Cuestionario finalizado</p>
             <hr class="linea">
-            <p class="resultado">Has respondido correctamente ${cant} de ${total}<p>
+            <p class="resultado">Has respondido correctamente  ${cant} de ${total}</p>
         `;
 
-        div.appendChild(recargar);
-
+       
         recargar.addEventListener("click", ()=>{
             cantPreguntas = 0;
             correctas = 0;
             cargarOpciones();
-        
+            console.log("cargando...");
         });
+        let p = document.createElement("p");
+        p.className="volver";
+        p.innerHTML=`<a href="./main.html">Volver al inicio</a>`;
+
+        div.appendChild(recargar);
+        div.appendChild(p);
 
         cuestionario.appendChild(div);
     }   
@@ -162,7 +178,7 @@ function cargarOpciones(){
     let ui = new UI();
 
     if(cantPreguntas!=totalPreguntas){
-        let pregunta = new Preguntas(data[cantPreguntas].quiz, data[cantPreguntas].choices, data[cantPreguntas].answer);
+        let pregunta = new Preguntas(data[id][cantPreguntas].quiz, data[id][cantPreguntas].choices, data[id][cantPreguntas].answer);
 
         borrarOpciones();
         ui.opcionesUI(pregunta, cantPreguntas, totalPreguntas);

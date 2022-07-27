@@ -1,5 +1,5 @@
 export const data = [
-    {
+    [{
         quiz: '¿Qué opción representa un desplazamiento vertical?',
         choices: [
             'f(x)+2',
@@ -33,14 +33,159 @@ export const data = [
             'Falso'
         ],
         answer: 'Verdadero'
+    }],
+    [
+        {
+            quiz: '¿Cuál comando permite crear una función a trozos?',
+            choices: [
+                'Si(condición, entonces)',
+                'Atrozos()',
+            ],
+            answer: 'Si(condición, entonces)'
+        },
+        {
+            quiz: '¿Cuál ejemplo es incorrecto?',
+            choices: [
+                'Si(x>2, x+1)',
+                'Si(x+1, x>2)'
+            ],
+            answer: 'Si(x>2, x+1)'
+        }
+    ],
+    [
+        {
+            quiz: '¿Cuál comando permite crear una función a trozos?',
+            choices: [
+                'Si(condición, entonces)',
+                'Atrozos()',
+            ],
+            answer: 'Si(condición, entonces)'
+        },
+        {
+            quiz: '¿Cuál ejemplo es incorrecto?',
+            choices: [
+                'Si(x>2, x+1)',
+                'Si(x+1, x>2)'
+            ],
+            answer: 'Si(x>2, x+1)'
+        }
+    ],
+    [
+        {
+            quiz: '¿Cuál comando permite crear una función a trozos?',
+            choices: [
+                'Si(condición, entonces)',
+                'Atrozos()',
+            ],
+            answer: 'Si(condición, entonces)'
+        },
+        {
+            quiz: '¿Cuál ejemplo es incorrecto?',
+            choices: [
+                'Si(x>2, x+1)',
+                'Si(x+1, x>2)'
+            ],
+            answer: 'Si(x>2, x+1)'
+        }
+    ],
+    [
+        {
+            quiz: '¿Cuál comando permite crear una función a trozos?',
+            choices: [
+                'Si(condición, entonces)',
+                'Atrozos()',
+            ],
+            answer: 'Si(condición, entonces)'
+        },
+        {
+            quiz: '¿Cuál ejemplo es incorrecto?',
+            choices: [
+                'Si(x>2, x+1)',
+                'Si(x+1, x>2)'
+            ],
+            answer: 'Si(x>2, x+1)'
+        }
+    ],
+    [
+        {
+            quiz: '¿Cuál comando permite crear una función a trozos?',
+            choices: [
+                'Si(condición, entonces)',
+                'Atrozos()',
+            ],
+            answer: 'Si(condición, entonces)'
+        },
+        {
+            quiz: '¿Cuál ejemplo es incorrecto?',
+            choices: [
+                'Si(x>2, x+1)',
+                'Si(x+1, x>2)'
+            ],
+            answer: 'Si(x>2, x+1)'
+        }
+    ],
+    [
+        {
+            quiz: '¿Cuál comando permite crear una función a trozos?',
+            choices: [
+                'Si(condición, entonces)',
+                'Atrozos()',
+            ],
+            answer: 'Si(condición, entonces)'
+        },
+        {
+            quiz: '¿Cuál ejemplo es incorrecto?',
+            choices: [
+                'Si(x>2, x+1)',
+                'Si(x+1, x>2)'
+            ],
+            answer: 'Si(x>2, x+1)'
+        }
+    ],
+    [
+        {
+            quiz: '¿Cuál comando permite crear una función a trozos?',
+            choices: [
+                'Si(condición, entonces)',
+                'Atrozos()',
+            ],
+            answer: 'Si(condición, entonces)'
+        },
+        {
+            quiz: '¿Cuál ejemplo es incorrecto?',
+            choices: [
+                'Si(x>2, x+1)',
+                'Si(x+1, x>2)'
+            ],
+            answer: 'Si(x>2, x+1)'
+        }
+    ]
+]
+
+
+export const info = [
+    {
+        titulo:"Álgebra y composición de funciones"
     },
     {
-        quiz: 'Las diagonales de un cuadrado se dividen mutuamente en partes iguales',
-        choices: [
-            'Verdadero',
-            'Falso'
-        ],
-        answer: 'Verdadero'
+        titulo:"Función definida a trozos"
+    },
+    {
+        titulo:"Transformación de funciones"
+    },
+    {
+        titulo:"Función inversa"
+    },
+    {
+        titulo:"Comando de derivadas"
+    },
+    {
+        titulo:"Algebra y composición de funciones"
+    },
+    {
+        titulo:"Función definida a trozos"
+    },
+    {
+        titulo:"Transformación de funciones"
     }
-    
 ]

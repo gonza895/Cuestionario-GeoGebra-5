@@ -34,16 +34,19 @@
 }
 
 .geo{
-    color: rgb(133, 82, 244);
+    /*color: rgb(133, 82, 244);*/
+    color: #6557d2;
     font-weight: bold;
 }
 
 .subtitulo{
     font-size: 16px;
+    text-align: center;
     color: rgb(48, 48, 48);
 }
 
 .linea{
+    margin-bottom: 10px;
     border: none;
     height: 1px;
     width: 100%;
@@ -250,11 +253,13 @@
     font-size: 20px;
     margin-top: 25px;
     text-align: center;
+    height: auto;
 }
 
 .resultados .resultados-title{
-    font-size: 23px;
+    font-size: 29px;
     font-weight: 700;
+    text-align: center;
 }
 
 .resultados #recargar{
@@ -268,6 +273,15 @@
     margin-top: 10px;
     transition: background-color .3s;
 }
+
+.volver{
+    margin-top: 20px;
+}
+
+.volver a{
+    color: rgb(52, 49, 212) !important;
+}
+
 
 /*Query*/
 
